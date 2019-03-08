@@ -23,6 +23,14 @@ export const addSmurf = smurf => dispatch => {
       .catch(err => console.log(err));
 }
 
+export const deleteSmurf = e => dispatch => {
+  axios.delete(`http://localhost:3333/smurfs/${e.target.value}`)
+      .then(res => {
+          dispatch({type:GET_SUCCESS,payload:res.data});
+      })
+      .catch(err => console.log(err));
+}
+
 export const getSmurf = () => dispatch => {
   dispatch({type:GET_SMURF});
   axios.get('http://localhost:3333/smurfs')

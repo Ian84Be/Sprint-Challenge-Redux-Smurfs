@@ -23,7 +23,7 @@ class App extends Component {
         {this.props.fetching && ( <div className="fetching">fetching..</div> )}
         {this.props.smurfs.map(smurf => {
           return (
-            <SmurfCard {...smurf} key={smurf.id}  />
+            <SmurfCard {...smurf} key={smurf.id} />
           );
         })}
       </div>

@@ -1,15 +1,17 @@
 import React from 'react';
+import {connect} from 'react-redux';
+
+import {deleteSmurf} from '../actions';
 
 const SmurfCard = props => {
     return ( 
-        <div className="smurfCard" key={props.id} >
-              <h2>{props.name}</h2>
-              <ul>
-                  <li>{props.age}</li>
-                  <li>{props.height}</li>
-              </ul>
+        <div className="SmurfCard" key={props.id}>
+            <h3>{props.name}</h3>
+            <p>Smurf Years: {props.age} years old</p>
+            <p>Smurf Height: {props.height}</p>
+            <button onClick={props.deleteSmurf} value={props.id}>Delete</button>
         </div>
      );
 }
  
-export default SmurfCard;
+export default connect(null,{deleteSmurf})(SmurfCard);

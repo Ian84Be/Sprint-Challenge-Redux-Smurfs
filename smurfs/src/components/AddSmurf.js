@@ -12,8 +12,9 @@ class AddSmurf extends Component {
     
       addSmurf = e => {
         e.preventDefault();
-        const newSmurf = {...this.state}
-        this.props.addSmurf(newSmurf)
+        const newSmurf = {...this.state};
+        this.props.addSmurf(newSmurf);
+        this.resetForm(e);
       }
 
     handleChange = e => {
