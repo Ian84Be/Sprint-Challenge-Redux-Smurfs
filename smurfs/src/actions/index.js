@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 export const ADD_SMURF = 'ADD_SMURF';
+export const EDIT_SMURF = 'EDIT_SMURF';
 export const GET_SMURF = 'GET_SMURF';
 export const GET_SUCCESS = 'GET_SUCCESS';
 
@@ -17,6 +18,14 @@ export const GET_SUCCESS = 'GET_SUCCESS';
 
 export const addSmurf = smurf => dispatch => {
   axios.post('http://localhost:3333/smurfs', smurf)
+      .then(res => {
+          dispatch({type:GET_SUCCESS,payload:res.data});
+      })
+      .catch(err => console.log(err));
+}
+
+export const editSmurf = smurf => dispatch => {
+  axios.put(`http://localhost:3333/smurfs/${smurf.id}`, smurf)
       .then(res => {
           dispatch({type:GET_SUCCESS,payload:res.data});
       })

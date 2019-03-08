@@ -4,6 +4,7 @@ import {getSmurf} from '../actions';
 
 import SmurfCard from './SmurfCard';
 import AddSmurf from './AddSmurf';
+import EditSmurf from './EditSmurf';
 import './App.css';
 
 class App extends Component {
@@ -14,7 +15,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <div className="crud-forms">
         <AddSmurf />
+        <EditSmurf />
+      </div>
         {this.props.fetching && ( <div className="fetching">fetching..</div> )}
         {this.props.smurfs.map(smurf => {
           return (

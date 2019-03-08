@@ -12,3 +12,7 @@ body {
   padding:8px;
   width:80%;
 }
+
+.crud-forms {
+  display:flex;
+}
