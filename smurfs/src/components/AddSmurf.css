@@ -1,0 +1,27 @@
+.FriendForm {
+    /* border:1px solid red; */
+    padding:4px;
+}
+form {
+    display:flex;
+    flex-direction: column;
+    max-width:400px;
+}
+
+input {
+    margin:4px;
+    background:paleturquoise;
+    border:0;
+    border-bottom:4px solid palegreen;
+    padding:4px;
+}
+
+input[type=submit], input[type=reset] {
+    background: white;
+}
+
+input[type=submit]:hover, input[type=reset]:hover {
+    cursor:pointer;
+    background:palegreen;
+    border-bottom:4px solid white;
+}

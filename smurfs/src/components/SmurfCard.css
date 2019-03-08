@@ -1,0 +1,20 @@
+.SmurfCard {
+    border-bottom:4px solid blueviolet;
+    margin:8px 0;
+    max-width:400px;
+    padding: 4px;
+}
+
+button {
+    margin:4px;
+    background:white;
+    border:0;
+    border-bottom:4px solid palegreen;
+    padding:4px;
+}
+
+button:hover {
+    cursor:pointer;
+    background:palegreen;
+    border-bottom:4px solid white;
+}

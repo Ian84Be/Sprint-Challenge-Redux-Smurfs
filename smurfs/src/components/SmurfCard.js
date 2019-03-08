@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {deleteSmurf} from '../actions';
+import './SmurfCard.css';
 
 const SmurfCard = props => {
     return ( 
