@@ -23,8 +23,21 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+Actions are messengers that ferry communications between the user interface and the application logic, when a user clicks a button, an action fires and tells the app what action to take next.
+
+Reducers take in actions and make prescribed changes to the application store.
+They are the gatekeepers and the only proper way to update state in a Redux Application.
+
+The Store is a sort of global application memory state, it's role is to hold the data necessary to operate the application. It is known as the 'single source of truth' because it lives outside of the application and provides a uni-directional data flow into the application. It can only be changed by sending actions to the reducers, and the results should be perfectly predictable based on the functional programming paradigm.
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+Application state is a persistent memory store for all connected components. Component state is an isolated memory store for a single component, and possibly its children. Component state is useful for things like forms, which require temporary storage to perform their function. Application state is useful for things like an authentication token which proves that you are a registered member currently signed in, allowing access to protected parts of the application.
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+Redux Thunk is a middleware which allows for asynchronous scripting. Basically, it catches the actions before they are dispatched to the reducer and facilitates better user experience by providing UI feedback while performing longer operations in the background of the application. Redux Thunk changes the action creators by adding an additional callback function which enables you to dictate when actions are allowed to move beyond the middleware and communicate with the reducer.
 
 ## Project Set Up
 
